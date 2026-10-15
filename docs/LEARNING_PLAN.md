@@ -11,14 +11,14 @@ Legend: `[ ]` baki · `[~]` cholche · `[x]` shesh
 ## 🟢 LEVEL 1 — FOUNDATION (Syntax ar basic jinish)
 
 ### Phase 0 — Setup & .NET ki jinish  → [lesson](phases/00-setup-and-dotnet.md)
-- [ ] .NET, SDK, Runtime, CLR, IL, JIT — ki, keno
-- [ ] C# vs .NET er parthokko
-- [ ] Visual Studio 2026 e Console App project banano
-- [ ] Solution (`.slnx`) vs Project (`.csproj`)
-- [ ] `Program.cs` — top-level statements vs classic `Main` method
-- [ ] `namespace`, `using`, `class`, statement, `;`, `{ }`, comments
-- [ ] `Console.WriteLine` ke tukro tukro kore bojha (namespace → class → method)
-- [ ] Build vs Run vs Debug (Ctrl+Shift+B, Ctrl+F5, F5)
+- [x] .NET, SDK, Runtime, CLR, IL, JIT — ki, keno
+- [x] C# vs .NET er parthokko
+- [x] Visual Studio 2026 e Console App project banano
+- [x] Solution (`.slnx`) vs Project (`.csproj`)
+- [x] `Program.cs` — top-level statements vs classic `Main` method
+- [x] `namespace`, `using`, `class`, statement, `;`, `{ }`, comments
+- [x] `Console.WriteLine` ke tukro tukro kore bojha (namespace → class → method)
+- [x] Build vs Run vs Debug (Ctrl+Shift+B, Ctrl+F5, F5)
 
 ### Phase 1 — Variables, Data Types, Input/Output  → [lesson](phases/01-variables-types-io.md)
 - [ ] Variable ki, declare vs assign vs initialize
@@ -230,3 +230,4 @@ Legend: `[ ]` baki · `[~]` cholche · `[x]` shesh
 | Date | Phase | Ki shikhlam / Note |
 |------|-------|--------------------|
 | 2026-10-15 | — | Docs ar roadmap toiri holo. Phase 0 diye shuru. |
+| 2026-10-15 | 0 | Project chalalam, Main/namespace/Console.WriteLine bujhlam. Fix korlam: runtime ≠ compile time, IL thake .dll er bhitore, cross-platform = IL + OS-specific runtime/JIT. |
