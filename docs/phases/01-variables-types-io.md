@@ -94,8 +94,8 @@ Shuru te explicit type (`int`, `string`) likho — type gula mathay boshbe.
 
 ## 4. `const` — Constant
 ```csharp
-const decimal VatRate = 0.15m;
-VatRate = 0.20m;   // ❌ error — const change kora jay na
+const decimal vatRate = 0.15m;
+vatRate = 0.20m;   // ❌ error — const change kora jay na
 ```
 **Why**: Je value kokhono change hobe na (VAT rate, shop name) — bhul kore change howa thekay,
 ar "magic number" (code e hothat `0.15` — eta ki?) er bodle meaningful nam.
@@ -104,7 +104,8 @@ ar "magic number" (code e hothat `0.15` — eta ki?) er bodle meaningful nam.
 | Ki | Style | Example |
 |----|-------|---------|
 | Local variable, parameter | **camelCase** | `unitPrice`, `customerName` |
-| Method, Class, Property, const | **PascalCase** | `CalculateTotal`, `Product`, `VatRate` |
+| Method, Class, Property, class-level const | **PascalCase** | `CalculateTotal`, `Product`, `VatRate` |
+| Local const (method / top-level er bhitore) | **camelCase** (amader `.editorconfig` er rule) | `vatRate`, `shopName` |
 | Private field | `_camelCase` | `_stock` (Phase 7) |
 
 ✅ Meaningful nam: `totalPrice` · ❌ `tp`, `x1`, `data`
@@ -274,7 +275,7 @@ Total    : 156.98
 <details>
 <summary>💡 Hint (atke gele khulo)</summary>
 
-- `const string ShopName = "...";`, `const decimal VatRate = 0.15m;`
+- `const string shopName = "...";`, `const decimal vatRate = 0.15m;`
 - Price er jonno `decimal.Parse(...)` (ekhon Parse e thik ache; Phase 2 e TryParse + loop diye safe korbo)
 - `{value:N2}` diye 2 decimal
 - `Math.Round(x, 2)` diye round
@@ -284,10 +285,10 @@ Total    : 156.98
 <summary>✅ Solution (age nije try korecho to? 😄)</summary>
 
 ```csharp
-const string ShopName = "Rahim Store";
-const decimal VatRate = 0.15m;
+const string shopName = "Rahim Store";
+const decimal vatRate = 0.15m;
 
-Console.WriteLine($"===== Welcome to {ShopName} =====");
+Console.WriteLine($"===== Welcome to {shopName} =====");
 
 Console.Write("Your name: ");
 string? customerName = Console.ReadLine();
@@ -302,7 +303,7 @@ Console.Write("Quantity: ");
 int quantity = int.Parse(Console.ReadLine()!);
 
 decimal subtotal = unitPrice * quantity;
-decimal vat = Math.Round(subtotal * VatRate, 2);
+decimal vat = Math.Round(subtotal * vatRate, 2);
 decimal total = subtotal + vat;
 
 Console.WriteLine();
